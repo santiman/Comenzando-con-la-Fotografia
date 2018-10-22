@@ -1,0 +1,290 @@
+body{
+  font-family: Dancing Script;
+  width: 90%;
+  background-color: #02010a;
+  color: white;
+  margin-left: 5%;
+}
+
+.contenido{
+  margin: 0;
+  width: 100%;
+}
+
+header{
+  overflow: hidden;
+  background: #5b7989;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  animation-name: rebote;
+  animation-duration: 1s;
+}
+
+header h1{
+  float: left;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 180%;
+  -webkit-text-shadow: 2px 3px #02010a;
+  text-shadow: 2px 3px #02010a;
+}
+
+ nav{
+  float: right;
+  padding-top: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
+  font-size: 115%;
+  line-height: 60px;
+}
+
+a{
+  color: white;
+  padding: 5px;
+  text-decoration: underline;
+  font-size: 126%;
+}
+
+footer{
+  background: #C6d5c5;
+  color: #02010a;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 4%;
+}
+
+dt{
+  font-size: 97%;
+  transform: translateY(-17px);
+}
+
+.colum1 a{
+  color: #02010a;
+  font-size: 130%;
+}
+
+.fo2 a{
+  text-decoration: none;
+}
+
+.fo3 a{
+  text-decoration: none;
+}
+
+.fo2:hover{
+  text-decoration: underline;
+}
+
+.fo3:hover{
+  text-decoration: underline;
+}
+
+.termi{
+  font-size: 130%;
+}
+
+.colum3 dt{
+  font-size: 130%;
+}
+
+.colum3 img{
+  width: 9%;
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+.face:hover{
+  text-decoration: underline;
+}
+
+.twi:hover{
+  text-decoration: underline;
+}
+
+.ins:hover{
+  text-decoration: underline;
+}
+
+.colum4 dt{
+  font-size: 130%;
+  padding-bottom: 25px;
+}
+
+[class^="colum"] {
+  width: 50%;
+  padding-right: 2%;
+}
+
+#tablet1, #tablet2{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+
+}
+
+.principal{
+  width: 100%;
+  background: #82c3a6;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.principal img{
+  width: 85%;
+}
+
+img{
+  box-shadow: 2px 3px #02010a;
+}
+
+.flex{
+display: flex;
+background: #d5c75f;
+text-align: center;
+flex-direction: row;
+padding-top: 2%;
+}
+
+.flex a{
+  color: #02010a;
+}
+
+.flex img{
+  border: 1px solid #02010a;
+}
+
+
+.paisajes img{
+  width: 80%;
+  transition: 0.7s;
+}
+
+.paisajes img:hover{
+  transform: rotate(10deg);
+  border: 2px solid #82c3a6;
+  box-shadow: 2px 3px #82c3a6;
+}
+
+.retratos img{
+  width: 76%;
+  transition: 0.7s;
+}
+
+
+.retratos img:hover{
+  transform: translate(20px,-5px);
+  border: 2px solid #82c3a6;
+  box-shadow: 2px 3px #82c3a6;
+}
+
+#fotos1, #fotos2{
+  display: flex;
+  background: #d5c75f;
+  text-align: center;
+  flex-direction: row;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#fotos1 img{
+  width: 80%;
+}
+
+#fotos2 img{
+  width: 80%;
+}
+
+.imagen1 img{
+  -webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+.imagen2, .imagen4, .imagen6 img {
+    filter: grayscale(100%);
+}
+
+.imagen3 img{
+  filter: sepia(90%);
+}
+
+@media (max-width:900px) {
+
+  .flex{
+    flex-direction: column;
+  }
+  .paisajes, .retratos{
+    width: 100%;
+  }
+
+  #fotos1, #fotos2{
+    flex-direction: column;
+  }
+
+  [class^="imagen"] {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  #tablet1, #tablet2{
+    flex-direction: column;
+    width: 100%;
+
+  }
+  [class^="colum"] {
+    width: 100%;
+  }
+}
+
+@media (max-width:650px) {
+
+  footer{
+    flex-direction:column;
+  }
+
+  #tablet1, #tablet2{
+    padding-left: 9%;
+  }
+}
+
+@media (max-width:900px) {
+
+
+  header nav{
+    float: none;
+    padding-bottom: 3%;
+    font-size: 130%;
+
+  }
+  header h1{
+    float: none;
+  }
+
+  .principal{
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+
+  .paisajes{
+    padding-top: 4%;
+  }
+}
+
+
+@keyframes
+rebote {
+
+  0%  {
+    margin-top: 150%;
+  }
+  60%  {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
