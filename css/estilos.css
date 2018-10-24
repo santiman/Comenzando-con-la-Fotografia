@@ -11,6 +11,13 @@ body{
   width: 100%;
 }
 
+img{
+  -webkit-box-shadow: 2px 3px #02010a;
+  box-shadow: 2px 3px #02010a;
+}
+
+/* Header */
+
 header{
   overflow: hidden;
   background: #5b7989;
@@ -18,7 +25,9 @@ header{
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 
+  -webkit-animation-name: rebote;
   animation-name: rebote;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
@@ -47,84 +56,21 @@ a{
   font-size: 126%;
 }
 
-footer{
-  background: #C6d5c5;
-  color: #02010a;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  padding-left: 4%;
+@keyframes
+rebote {
+
+  0%  {
+    margin-top: 150%;
+  }
+  60%  {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
 }
 
-dt{
-  font-size: 97%;
-  transform: translateY(-17px);
-}
-
-.colum1 a{
-  color: #02010a;
-  font-size: 130%;
-}
-
-.fo2 a{
-  text-decoration: none;
-}
-
-.fo3 a{
-  text-decoration: none;
-}
-
-.fo2:hover{
-  text-decoration: underline;
-}
-
-.fo3:hover{
-  text-decoration: underline;
-}
-
-.termi{
-  font-size: 130%;
-}
-
-.colum3 dt{
-  font-size: 130%;
-}
-
-.colum3 img{
-  width: 9%;
-  box-shadow: none;
-  transform: translateY(6px);
-}
-
-.face:hover{
-  text-decoration: underline;
-}
-
-.twi:hover{
-  text-decoration: underline;
-}
-
-.ins:hover{
-  text-decoration: underline;
-}
-
-.colum4 dt{
-  font-size: 130%;
-  padding-bottom: 25px;
-}
-
-[class^="colum"] {
-  width: 50%;
-  padding-right: 2%;
-}
-
-#tablet1, #tablet2{
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-
-}
+/* Imagen Principal */
 
 .principal{
   width: 100%;
@@ -135,14 +81,12 @@ dt{
 }
 
 .principal img{
-  width: 85%;
+  width: 75%;
 }
 
-img{
-  box-shadow: 2px 3px #02010a;
-}
+/* Paisajes - Retratos */
 
-.flex{
+.imagenes{
 display: flex;
 background: #d5c75f;
 text-align: center;
@@ -150,37 +94,44 @@ flex-direction: row;
 padding-top: 2%;
 }
 
-.flex a{
+.imagenes a{
   color: #02010a;
 }
 
-.flex img{
+.imagenes img{
   border: 1px solid #02010a;
 }
 
-
 .paisajes img{
   width: 80%;
+  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
 .paisajes img:hover{
+  -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
   border: 2px solid #82c3a6;
+  -webkit-box-shadow: 2px 3px #82c3a6;
   box-shadow: 2px 3px #82c3a6;
 }
 
 .retratos img{
   width: 76%;
+  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
 
 .retratos img:hover{
+  -webkit-transform: translate(20px,-5px);
   transform: translate(20px,-5px);
   border: 2px solid #82c3a6;
+  -webkit-box-shadow: 2px 3px #82c3a6;
   box-shadow: 2px 3px #82c3a6;
 }
+
+/* Paginas: Paisajes - Retratos */
 
 #fotos1, #fotos2{
   display: flex;
@@ -205,18 +156,135 @@ padding-top: 2%;
 }
 
 .imagen2, .imagen4, .imagen6 img {
-    filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .imagen3 img{
+  -webkit-filter: sepia(90%);
   filter: sepia(90%);
 }
 
+/* Footer */
+
+footer{
+  background: #C6d5c5;
+  color: #02010a;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2%;
+}
+
+dt{
+  font-size: 97%;
+  -webkit-transform: translateY(-17px);
+  transform: translateY(-17px);
+}
+
+[class^="colum"] {
+  width: 50%;
+  padding-right: 2%;
+}
+
+#t-colum1, #t-colum2{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+
+}
+
+/* Footer - Contacto */
+
+.colum1 a{
+  color: #02010a;
+  font-size: 130%;
+}
+
+.contac2 a{
+  text-decoration: none;
+}
+
+.contac3 a{
+  text-decoration: none;
+}
+
+.contac2:hover{
+  text-decoration: underline;
+}
+
+.contac3:hover{
+  text-decoration: underline;
+}
+
+/* Footer - Terminos */
+
+.termi{
+  font-size: 130%;
+}
+
+/* Footer - Redes Sociales */
+
+.colum3 dt{
+  font-size: 130%;
+}
+
+.colum3 img{
+  width: 9%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+}
+
+.face:hover{
+  text-decoration: underline;
+}
+
+.twi:hover{
+  text-decoration: underline;
+}
+
+.ins:hover{
+  text-decoration: underline;
+}
+
+/* Footer - CopyRight */
+
+.colum4 dt{
+  font-size: 130%;
+  padding-bottom: 25px;
+}
+
+/* Media Querys */
+
 @media (max-width:900px) {
 
-  .flex{
+  header nav{
+    float: none;
+    padding-bottom: 3%;
+    font-size: 130%;
+
+  }
+
+  header h1{
+    float: none;
+  }
+
+  .imagenes{
     flex-direction: column;
   }
+
+  .principal{
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+
+  .paisajes{
+    padding-top: 4%;
+  }
+
   .paisajes, .retratos{
     width: 100%;
   }
@@ -230,7 +298,7 @@ padding-top: 2%;
     padding-bottom: 2%;
   }
 
-  #tablet1, #tablet2{
+  #t-colum1, #t-colum2{
     flex-direction: column;
     width: 100%;
 
@@ -246,45 +314,7 @@ padding-top: 2%;
     flex-direction:column;
   }
 
-  #tablet1, #tablet2{
+  #t-colum1, #t-colum2{
     padding-left: 9%;
-  }
-}
-
-@media (max-width:900px) {
-
-
-  header nav{
-    float: none;
-    padding-bottom: 3%;
-    font-size: 130%;
-
-  }
-  header h1{
-    float: none;
-  }
-
-  .principal{
-    padding-top: 4%;
-    padding-bottom: 4%;
-  }
-
-  .paisajes{
-    padding-top: 4%;
-  }
-}
-
-
-@keyframes
-rebote {
-
-  0%  {
-    margin-top: 150%;
-  }
-  60%  {
-    margin-top: -5%;
-  }
-  100% {
-    margin-top: 0%;
   }
 }
